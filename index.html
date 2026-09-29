@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>منظومة مشروع قانون جدول المرتبات الموحد الشامل - معيار الدينار الذهبي</title>
+    <!-- Open Graph / وسوم فيسبوك وتطبيقات التواصل الاجتماعي للمعاينة التلقائية -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="جدول المرتبات الموحد الشامل - معيار الدينار الذهبي الإسلامي">
+    <meta property="og:description" content="رؤية وطنية قائمة على معيار الدينار الذهبي الإسلامي لتوحيد مرتبات كافة العاملين بالدولة الليبية دون تمييز أو مزايا لقطاع دون آخر.">
+    <meta property="og:image" content="./preview.jpg">
+    <meta property="og:image:secure_url" content="./preview.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="1697">
+    <meta property="og:image:alt" content="ملصق جدول المرتبات الموحد الشامل - معيار الدينار الذهبي الإسلامي">
+    <meta property="og:locale" content="ar_LY">
+
+    <!-- Twitter Cards Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="جدول المرتبات الموحد الشامل - معيار الدينار الذهبي الإسلامي">
+    <meta name="twitter:description" content="رؤية وطنية قائمة على معيار الدينار الذهبي الإسلامي لتوحيد مرتبات كافة العاملين بالدولة الليبية دون تمييز أو مزايا لقطاع دون آخر.">
+    <meta name="twitter:image" content="./preview.jpg">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: 'Tajawal', sans-serif;
+            background-color: #F8FAFC;
+            color: #0F172A;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+        /* Adaptive Chart Heights across Devices */
+        .chart-container {
+            position: relative;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            height: 260px;
+        }
+        @media (min-width: 640px) {
+            .chart-container {
+                height: 310px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .chart-container {
+                height: 380px;
+            }
+        }
+        .dark-card {
+            background: linear-gradient(145deg, #0F172A 0%, #1E293B 100%);
+        }
+        .gold-border {
+            border-color: #D97706;
+        }
+        .emerald-border {
+            border-color: #059669;
+        }
+        /* Sleek Responsive Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+            height: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #E2E8F0;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #059669;
+            border-radius: 9999px;
+        }
+        /* Mobile Touch-Friendly Accordion */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-content.open {
+            max-height: 2200px;
+            transition: max-height 0.5s ease-in;
+        }
+        /* Horizontal scroll smoothly on touch */
+        .touch-scroll {
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 leading-relaxed antialiased">
+
+    <!-- Sticky Responsive Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur-md border-b border-amber-500/30 text-white shadow-lg">
+        <div class="max-w-7xl mx-auto px-3 sm:px-6 flex items-center justify-between h-14 sm:h-16">
+            <div class="flex items-center gap-2 sm:gap-3 shrink-0">
+                <span class="text-xl sm:text-2xl">⚜</span>
+                <span class="font-extrabold text-xs sm:text-base text-amber-400">جدول المرتبات الموحد 2026</span>
+            </div>
+
+            <!-- Desktop & Tablet Quick Links -->
+            <div class="hidden md:flex items-center gap-1 lg:gap-2 text-xs lg:text-sm font-medium">
+                <a href="#overview" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-slate-200 transition-colors">المؤشرات</a>
+                <a href="#gold-engine" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-amber-300 transition-colors">المعيار الذهبي</a>
+                <a href="#salary-scale" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-emerald-300 transition-colors">السلم والدرجات</a>
+                <a href="#clusters" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-slate-200 transition-colors">الكتلات</a>
+                <a href="#fiscal-impact" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-slate-200 transition-colors">الأثر المالي</a>
+                <a href="#draft-law" class="px-2.5 py-1.5 rounded-lg hover:bg-slate-800 text-amber-400 transition-colors">مسودة القانون</a>
+            </div>
+
+            <!-- Mobile Navigation Toggle Button -->
+            <button id="mobileMenuBtn" aria-label="القائمة" class="md:hidden p-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-400 text-lg flex items-center justify-center">
+                <span>☰</span>
+            </button>
+        </div>
+
+        <!-- Mobile Expandable Menu Drawer -->
+        <div id="mobileMenuDropdown" class="hidden md:hidden bg-slate-900 border-t border-slate-800 px-4 py-3 space-y-2 text-xs sm:text-sm">
+            <a href="#overview" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-slate-200" onclick="toggleMobileNav()">📊 المؤشرات الهيكلية</a>
+            <a href="#gold-engine" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-amber-300" onclick="toggleMobileNav()">🪙 معيار الدينار الذهبي والحاسبة</a>
+            <a href="#salary-scale" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-emerald-300" onclick="toggleMobileNav()">⚖️ سلم الدرجات العشرين</a>
+            <a href="#clusters" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-slate-200" onclick="toggleMobileNav()">👥 الكتلات الوظيفية الأربع</a>
+            <a href="#fiscal-impact" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-rose-300" onclick="toggleMobileNav()">📈 الاستدامة والأثر المالي</a>
+            <a href="#draft-law" class="block py-2 px-3 rounded-lg hover:bg-slate-800 text-amber-400" onclick="toggleMobileNav()">🏛️ مسودة القانون وخارطة التنفيذ</a>
+        </div>
+    </nav>
+
+    <!-- Sovereign Header (Fully Adaptive) -->
+    <header class="dark-card text-white py-8 sm:py-12 px-3 sm:px-6 shadow-2xl border-b-4 border-amber-500 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 relative z-10">
+            <div class="text-center lg:text-right space-y-3 sm:space-y-4 max-w-3xl w-full">
+                <div class="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-[11px] sm:text-xs font-bold border border-amber-500/40">
+                    <span>⚖</span>
+                    <span>دراسة تأصيلية ومسودة مشروع قانون مقترح - إصلاح الوظيفة العامة</span>
+                </div>
+                <h1 class="text-2xl sm:text-4xl lg:text-3xl font-black text-white leading-tight">
+                      مقترح غير رسمي لمشروع قانون جدول المرتبات الموحد الشامل العادل
+                </h1>
+                <p class="text-slate-300 text-xs sm:text-sm lg:text-base leading-relaxed text-justify sm:text-right">
+                    منظومة أجور رقمية سيادية قائمة على <span class="text-amber-400 font-bold">معيار الدينار الذهبي الإسلامي (4.25 غرام عيار 24)</span> لتحقيق العدالة الاجتماعية، وضبط الفوارق الطبقية، وحماية القوة الشرائية للدينار الليبي من التآكل التضخمي عبر كافة الأجهزة والمؤسسات.
+                </p>
+                
+            </div>
+
+            <!-- Quick Responsive Indicator Badge -->
+            <div class="w-full sm:w-auto min-w-full sm:min-w-[280px] lg:min-w-[320px] bg-slate-800/95 backdrop-blur border border-amber-500/50 rounded-2xl p-4 sm:p-6 text-center shadow-2xl shrink-0">
+                <div class="text-[11px] sm:text-xs text-amber-300 font-bold mb-1 uppercase tracking-wider">الربط النقدي المرجعي</div>
+                <div class="text-3xl sm:text-4xl font-black text-amber-400 my-1 sm:my-2" id="headerGoldLyd">3,750 <span class="text-sm sm:text-base text-slate-300">د.ل</span></div>
+                <div class="text-[11px] sm:text-xs text-emerald-400 font-semibold bg-emerald-950/60 py-1 px-3 rounded-full inline-block border border-emerald-500/30">
+                    يعادل 1.00 دينار ذهبي إسلامي
+                </div>
+                <div class="mt-3 sm:mt-4 pt-2 sm:pt-3 border-t border-slate-700/80 text-[10px] sm:text-[11px] text-slate-400 flex justify-between">
+                    <span>الوزن: 4.25 غرام</span>
+                    <span>النقاوة: 24 قيراط</span>
+                    <span class="text-amber-400 font-bold">معيار دولي</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-3 sm:px-6 py-6 sm:py-10 space-y-10 sm:space-y-16">
+
+        <!-- Responsive Intro Banner -->
+        <section class="bg-amber-500/10 border-r-4 border-amber-500 p-4 sm:p-6 rounded-2xl">
+            <h3 class="font-bold text-amber-900 text-sm sm:text-base mb-1.5">مقترح مشروع قانون جدول المرتبات الموحد الشامل</h3>
+
+            <p class="text-slate-700 text-xs sm:text-sm leading-relaxed">
+                
+            </p>
+        </section>
+        <!-- Official Infographic Poster Card Showcase -->
+        <section class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-200">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 mb-4 border-b border-slate-100 pb-4">
+                <div class="space-y-1 text-right w-full md:w-auto">
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-100 text-blue-800 text-[11px] font-bold">
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <h3 class="text-base sm:text-lg font-black text-slate-900"></h3>
+                    <p class="text-xs text-slate-500"></p>
+                </div>
+                <div class="flex items-center gap-2 self-start md:self-auto">
+                    <a href="./preview.jpg" target="_blank" download="جدول-المرتبات-الموحد.jpg" class="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-xs font-bold transition-all flex items-center gap-1.5 shadow-sm">
+                        <span>📥</span>
+                        <span>تحميل الملصق بجودة عالية</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Poster Display Frame -->
+            <div class="max-w-xl mx-auto rounded-2xl overflow-hidden shadow-2xl border-2 border-slate-800 bg-slate-900 group">
+                <img src="./preview.jpg" alt="جدول المرتبات الموحد الشامل - معيار الدينار الذهبي" class="w-full h-auto object-cover group-hover:scale-[1.01] transition-transform duration-300" onerror="this.onerror=null; this.src='https://placehold.co/1200x1600/0F172A/FBBF24?text=%D8%AC%D8%AF%D9%88%D9%84+%D8%A7%D9%84%D9%85%D8%B1%D8%AA%D8%A8%D8%A7%D8%AA+%D8%A7%D9%84%D9%85%D9%88%D8%AD%D8%AF+%D8%A7%D9%84%D8%B4%D8%A7%D9%85%D9%84';">
+            
+            </p>
+        </section>
+
+        <!-- KPI Dashboard Section (1 col on mobile, 2 on tablet, 4 on desktop) -->
+        <section id="overview" class="space-y-4 sm:space-y-6">
+            <div class="border-r-4 border-emerald-600 pr-3 sm:pr-4">
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900">المؤشرات الهيكلية الكلية للجدول الموحد</h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-0.5">قراءة سريعة في المستهدفات الإصلاحية للوظيفة العامة ومكافحة التشوه التشريعي بالأجور.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-5">
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all">
+                    <div class="flex items-center justify-between mb-2 sm:mb-3">
+                        <span class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase">الحد الأدنى للأجر (الدرجة 1)</span>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-xs sm:text-sm">1</span>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">3,750 <span class="text-xs sm:text-sm font-normal text-slate-500">د.ل</span></div>
+                    <div class="text-[11px] sm:text-xs text-emerald-600 font-semibold mt-1">مقابل 1.00 دينار ذهبي إسلامي</div>
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2 sm:mt-3 border-t pt-2 border-slate-100 leading-normal">
+                        يرمم الكفاية المعيشية لأصحاب المهن المعاونة وشاغلي الدرجة الأولى للحد من الفقر.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all">
+                    <div class="flex items-center justify-between mb-2 sm:mb-3">
+                        <span class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase">سقف الأجر السيادي (الدرجة 20)</span>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-xs sm:text-sm">20</span>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">30,000 <span class="text-xs sm:text-sm font-normal text-slate-500">د.ل</span></div>
+                    <div class="text-[11px] sm:text-xs text-amber-600 font-semibold mt-1">يعادل 8.00 دنانير ذهبية</div>
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2 sm:mt-3 border-t pt-2 border-slate-100 leading-normal">
+                        راتب رئيس الدولة الموحد وحظر التجاوزات والاستثناءات القطاعية الموازية.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all">
+                    <div class="flex items-center justify-between mb-2 sm:mb-3">
+                        <span class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase">نسبة الانضغاط الرأسي</span>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold text-xs sm:text-sm">⚖</span>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">1 : 8 <span class="text-xs sm:text-sm font-normal text-slate-500">كحد أقصى</span></div>
+                    <div class="text-[11px] sm:text-xs text-blue-600 font-semibold mt-1">مقارنة بنسبة 1 : 30+ السابقة</div>
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2 sm:mt-3 border-t pt-2 border-slate-100 leading-normal">
+                        تقليص الفجوة الطبقية العميقة بين الهيئات السيادية والخدمية وفق معايير الإدارة الدولية.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 hover:shadow-md transition-all">
+                    <div class="flex items-center justify-between mb-2 sm:mb-3">
+                        <span class="text-[11px] sm:text-xs font-bold text-slate-500 uppercase">فاتورة المرتبات (2025)</span>
+                        <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-rose-100 text-rose-700 flex items-center justify-center font-bold text-xs sm:text-sm">📈</span>
+                    </div>
+                    <div class="text-2xl sm:text-3xl font-black text-slate-900">73.3 <span class="text-xs sm:text-sm font-normal text-slate-500">مليار د.ل</span></div>
+                    <div class="text-[11px] sm:text-xs text-rose-600 font-semibold mt-1">ارتفاع بنسبة 236% منذ 2020</div>
+                    <p class="text-[10px] sm:text-[11px] text-slate-500 mt-2 sm:mt-3 border-t pt-2 border-slate-100 leading-normal">
+                        تستوجب التطهير الفوري للإزدواج الوظيفي والربط بالرقم الوطني الموحد والرقم المالي.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Gold Standard Engine & Adaptive Calculator -->
+        <section id="gold-engine" class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl border border-slate-200 space-y-6 sm:space-y-8">
+            <div class="max-w-3xl space-y-2 sm:space-y-3">
+                <div class="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-[11px] sm:text-xs font-bold">
+                    التأصيل الاقتصادي والشرعي
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900 leading-snug">
+                    معيار الدينار الذهبي الإسلامي: تحصين الأجر من التآكل التضخمي
+                </h2>
+                <p class="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed text-justify sm:text-right">
+                    يتحدد الدينار الذهبي الإسلامي استناداً إلى المعايير الفقهية بوزن مقداره <span class="font-bold text-amber-700">4.25 غرامات من الذهب الخالص عيار 24 قيراطاً</span>. يعالج هذا المقترح الهيكلي انهيار القوة الشرائية الناتجة عن تذبذب سعر الصرف والرسوم المالية. عبر ربط السلم بوحدة حسابية قياسية مستقرة، يتوفر للموظف حماية موضوعية من التضخم دون تحويل الذهب إلى أداة مضاربة سوقية يومية.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                <!-- Interactive Dynamic Rate Calculator Card -->
+                <div class="lg:col-span-5 dark-card text-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 space-y-4 sm:space-y-6 shadow-2xl border border-slate-800 w-full">
+                    <div class="flex items-center justify-between border-b border-slate-700 pb-3">
+                        <h3 class="text-base sm:text-lg font-bold text-amber-400">حاسبة تسعير الأجر بالدينار الذهبي</h3>
+                        <span class="text-xl">🪙</span>
+                    </div>
+
+                    <div class="space-y-4 text-xs">
+                        <div>
+                            <label class="block text-slate-300 mb-1 font-semibold text-xs">سعر غرام الذهب عيار 24 (بالدينار الليبي):</label>
+                            <input type="number" id="goldRateInput" value="882.35" step="5" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3.5 py-2.5 text-amber-400 font-bold focus:outline-none focus:border-amber-400 text-sm">
+                            <span class="text-[10px] text-slate-400 mt-1 block">* السعر القياسي لعام 2026: 882.35 د.ل/غرام</span>
+                        </div>
+
+                        <div>
+                            <label class="block text-slate-300 mb-1 font-semibold text-xs">اختر الدرجة الوظيفية للمحاكاة:</label>
+                            <select id="gradeSelectCalc" class="w-full bg-slate-800 border border-slate-700 rounded-xl px-3 py-2.5 text-white font-medium focus:outline-none focus:border-emerald-500 text-xs sm:text-sm">
+                                <!-- Populated via JS -->
+                            </select>
+                        </div>
+
+                        <div class="p-3.5 sm:p-4 bg-slate-800/90 rounded-2xl space-y-2.5 sm:space-y-3 border border-slate-700/80">
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span>قيمة الدينار الذهبي المرجعي:</span>
+                                <span class="font-bold text-amber-400 text-xs sm:text-sm" id="dynamicGoldVal">3,750 د.ل</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-300">
+                                <span>المقابل بالدنانيـر الذهبيـة:</span>
+                                <span class="font-bold text-emerald-400 text-xs sm:text-sm" id="dynamicGradeGold">1.00 دينار ذهبي</span>
+                            </div>
+                            <div class="flex justify-between items-center text-slate-300 border-t border-slate-700 pt-2">
+                                <span class="font-bold text-white text-xs sm:text-sm">المرتب الأساسي التقديري:</span>
+                                <span class="font-extrabold text-amber-400 text-sm sm:text-base" id="dynamicGradeSalary">3,750 د.ل</span>
+                            </div>
+                        </div>
+
+                        <p class="text-[10px] sm:text-[11px] text-slate-400 leading-normal">
+                            * يتأسس التطبيق التشريعي السليم على اعتبار الدينار الذهبي "وحدة حسابية مرجعية" تُراجَع دورياً عبر لجنة فنية مشتركة لضمان الاستدامة المالية دون إحداث صدمات نقديّة.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Explanation Cards -->
+                <div class="lg:col-span-7 space-y-4 sm:space-y-5 w-full">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                        <div class="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200 space-y-1.5 sm:space-y-2">
+                            <div class="font-bold text-amber-900 text-xs sm:text-sm flex items-center gap-2">
+                                <span>🛡️</span>
+                                <span>حماية القوة الشرائية</span>
+                            </div>
+                            <p class="text-[11px] sm:text-xs text-amber-950/80 leading-relaxed">
+                                حماية أجور الموظفين من موجات التضخم المستورد الناتجة عن تذبذب أسعار الصرف واستيراد غالبية السلع الاستهلاكية من الخارج.
+                            </p>
+                        </div>
+
+                        <div class="p-4 sm:p-5 rounded-2xl bg-emerald-50/70 border border-emerald-200 space-y-1.5 sm:space-y-2">
+                            <div class="font-bold text-emerald-900 text-xs sm:text-sm flex items-center gap-2">
+                                <span>⚖️</span>
+                                <span>ضبط الهرم الوظيفي</span>
+                            </div>
+                            <p class="text-[11px] sm:text-xs text-emerald-950/80 leading-relaxed">
+                                ضمان ضبط الفجوة بين قمة الجهاز الإداري وأدنى درجاته بنسبة مستقرة لا تتجاوز (8 : 1) لمنع التشوهات والانقسامات الفئوية.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="p-4 sm:p-6 rounded-2xl bg-slate-50 border border-slate-200 space-y-2.5 sm:space-y-3">
+                        <h4 class="text-[11px] sm:text-xs font-bold text-slate-700 uppercase tracking-wider">المعادلة القياسية لتسعير الأجور وفق المقترح</h4>
+                        <div class="text-center font-mono text-[11px] sm:text-xs lg:text-sm font-bold text-slate-800 bg-white py-2.5 sm:py-3 px-3 sm:px-4 rounded-xl border border-slate-200 shadow-sm leading-relaxed overflow-x-auto">
+                            قيمة الدينار الذهبي = 4.25 غرام × سعر الغرام عيار 24 (882.35 د.ل) = 3,750 د.ل
+                        </div>
+                        <p class="text-[10px] sm:text-[11px] text-slate-500 leading-normal">
+                            تُسعر باقي الدرجات كمضاعفات ومكسورات حسابية ثابتة لهذا المعادل، مما يمنح الموظف وضوحاً تاماً لقيمة أجره الحقيقي مقابل المعدن النفيس.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: Salary Scale & Interactive Explorer with Dual Mobile/Desktop Views -->
+        <section id="salary-scale" class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl border border-slate-200 space-y-6 sm:space-y-8">
+            <div class="space-y-2 sm:space-y-3">
+                <div class="inline-block px-3 py-1 bg-emerald-100 text-emerald-800 rounded-full text-[11px] sm:text-xs font-bold">
+                    التوزيع التفصيلي للسلَّم الموحد
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900">
+                    جدول المرتبات الموحد الشامل (الدرجات من 1 إلى 20)
+                </h2>
+                <p class="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
+                    يعرض الرسم البياني التفاعلي وشبكة البيانات أدناه تدرج بدايات المربوط الأساسي والعلاوات السنوية بالدينار الليبي وما يقابلها بالدينار الذهبي، مع التكيف التلقائي لأبعاد الشاشة.
+                </p>
+            </div>
+
+            <!-- Dynamic Salary Scale Combo Chart -->
+            <div class="bg-slate-50 rounded-2xl p-3 sm:p-6 border border-slate-200">
+                <div class="chart-container">
+                    <canvas id="salaryChart"></canvas>
+                </div>
+                <p class="text-center text-[10px] sm:text-xs text-slate-500 mt-3">
+                    توضيح: الأعمدة تمثل المربوط الأساسي بالدينار الليبي (المحور الأيمن)، والخط يمثل المقابل بالدينار الذهبي (المحور الأيسر).
+                </p>
+            </div>
+
+            <!-- Search & Responsive View Controller -->
+            <div class="space-y-4">
+                <div class="flex flex-col md:flex-row justify-between items-stretch md:items-center gap-3 border-b border-slate-200 pb-4">
+                    <div>
+                        <h3 class="text-base sm:text-lg font-bold text-slate-900">شروط التسكين والاستحقاقات المالية (20 درجة)</h3>
+                        <p class="text-[11px] sm:text-xs text-slate-500">ابحث بالدرجة أو المؤهل، وبدّل بين نمط الجدول ونمط البطاقات الذكية</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                        <!-- View Mode Switcher -->
+                        <div class="inline-flex rounded-xl bg-slate-100 p-1 border border-slate-200 text-xs font-bold self-start sm:self-auto">
+                            <button id="viewTableBtn" onclick="switchScaleView('table')" class="px-3 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all flex items-center gap-1">
+                                <span>📋</span>
+                                <span>جدول تفصيلي</span>
+                            </button>
+                            <button id="viewCardsBtn" onclick="switchScaleView('cards')" class="px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1">
+                                <span>🃏</span>
+                                <span>بطاقات ذكية</span>
+                            </button>
+                        </div>
+
+                        <!-- Search Input -->
+                        <div class="w-full sm:w-64">
+                            <input type="text" id="tableSearch" placeholder="ابحث عن درجة أو مؤهل..." class="w-full px-3.5 py-2 border border-slate-300 rounded-xl text-xs focus:outline-none focus:border-emerald-600 shadow-sm">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- View 1: Scrollable Table View (Optimized for desktop and tablet) -->
+                <div id="tableViewWrapper" class="overflow-x-auto rounded-2xl border border-slate-200 shadow-sm max-h-[520px] overflow-y-auto touch-scroll">
+                    <table class="w-full text-right text-xs min-w-[620px]">
+                        <thead class="bg-slate-900 text-white sticky top-0 font-bold">
+                            <tr>
+                                <th class="p-3 sm:p-3.5 whitespace-nowrap">الدرجة</th>
+                                <th class="p-3 sm:p-3.5">معايير وشروط التسكين وشغل الوظيفة</th>
+                                <th class="p-3 sm:p-3.5 whitespace-nowrap">بداية المربوط (د.ل)</th>
+                                <th class="p-3 sm:p-3.5 whitespace-nowrap">العلاوة السنوية</th>
+                                <th class="p-3 sm:p-3.5 whitespace-nowrap">بالدينار الذهبي</th>
+                            </tr>
+                        </thead>
+                        <tbody id="salaryTableBody" class="divide-y divide-slate-200 bg-white text-slate-700">
+                            <!-- Populated via JS -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- View 2: Mobile Cards View (Optimized for phones & quick scanning) -->
+                <div id="cardsViewWrapper" class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 max-h-[600px] overflow-y-auto p-1 touch-scroll">
+                    <!-- Populated via JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Functional Clusters Breakdown -->
+        <section id="clusters" class="space-y-4 sm:space-y-6">
+            <div class="border-r-4 border-amber-500 pr-3 sm:pr-4">
+                <h2 class="text-xl sm:text-2xl font-bold text-slate-900">التوزيع الهيكلي للكتلات الوظيفية الأربع</h2>
+                <p class="text-slate-600 text-xs sm:text-sm mt-0.5">تقسيم موظفي الدولة إلى 4 مجموعات رئيسية تحقق الاتساق التشغيلي داخل الجهاز الإداري.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
+                <div class="lg:col-span-5 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-200">
+                    <h3 class="text-sm sm:text-base font-bold text-slate-900 mb-3 sm:mb-4 text-center">توزيع عدد الدرجات الوظيفية لكل كتلة</h3>
+                    <div class="chart-container">
+                        <canvas id="clustersChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-3.5 sm:gap-4">
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1.5 hover:border-emerald-500 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-extrabold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-md">الكتلة الأولى</span>
+                            <span class="text-xs text-slate-500">الدرجات (1 - 6)</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs sm:text-sm">الخدمات المعاونة والتشغيل المهني</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                            تغطي العمالة الحرفية والمكتبية المساعدة لشاغلي المؤهلات دون الجامعية. تبدأ من 3,750 د.ل حتى 6,000 د.ل لتوفير حد أدنى كريم للأجور.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1.5 hover:border-blue-500 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-extrabold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-md">الكتلة الثانية</span>
+                            <span class="text-xs text-slate-500">الدرجات (7 - 11)</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs sm:text-sm">الوظائف التخصصية والتنفيذية</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                            عصب الإنتاج الخدمي (التعليم، الصحة، الهندسة). تبدأ الدرجة الجامعية (8) بـ 7,400 د.ل، والماجستير والطب (9) بـ 8,250 د.ل، والدكتوراه (10) بـ 9,200 د.ل.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1.5 hover:border-purple-500 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-extrabold text-purple-700 bg-purple-50 px-2.5 py-1 rounded-md">الكتلة الثالثة</span>
+                            <span class="text-xs text-slate-500">الدرجات (12 - 16)</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs sm:text-sm">الإدارة العليا والإشراف الأكاديمي</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                            تضم مديري الإدارات العامة، الخبراء المستشارين، والأساتذة الجامعيين. تصل إلى الدرجة (16) بسقف 18,600 د.ل وهو قمة الخدمة المدنية.
+                        </p>
+                    </div>
+
+                    <div class="bg-white p-4 sm:p-5 rounded-2xl border border-slate-200 shadow-sm space-y-1.5 hover:border-amber-500 transition-colors">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-extrabold text-amber-700 bg-amber-50 px-2.5 py-1 rounded-md">الكتلة الرابعة</span>
+                            <span class="text-xs text-slate-500">الدرجات (17 - 20)</span>
+                        </div>
+                        <h4 class="font-bold text-slate-900 text-xs sm:text-sm">الوظائف السيادية والقيادية العليا</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                            تختص برؤساء الهيئات المستقلة، الوزراء، أعضاء مجلس النواب، المحافظ، القضاء، ورئاسة الدولة (من 21,000 إلى 30,000 د.ل).
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Macroeconomic & Fiscal Impact -->
+        <section id="fiscal-impact" class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl border border-slate-200 space-y-6 sm:space-y-8">
+            <div class="space-y-2 sm:space-y-3">
+                <div class="inline-block px-3 py-1 bg-rose-100 text-rose-800 rounded-full text-[11px] sm:text-xs font-bold">
+                    الاستدامة النقدية والمالية
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900">
+                    مسار فاتورة المرتبات والإصلاحات الاقتصادية المطلوبة
+                </h2>
+                <p class="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed text-justify sm:text-right">
+                    ارتفعت فاتورة المرتبات من 21.8 مليار دينار في 2020 إلى 73.3 مليار دينار في 2025. يوضح الرسم البياني الفارق بين سيناريو الصرف المباشر غير المنظم  وبين السيناريو الإصلاحي المقترح الذي يربط التعديل بالتطهير الإداري وربط الرقم الوطني.
+                </p>
+            </div>
+
+            <!-- Chart Fiscal Trajectory -->
+            <div class="bg-slate-50 rounded-2xl p-3 sm:p-6 border border-slate-200">
+                <div class="chart-container">
+                    <canvas id="fiscalChart"></canvas>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-3.5 sm:gap-5">
+                <div class="p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5 sm:space-y-2">
+                    <div class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-2">
+                        <span>🔍</span>
+                        <span>التطهير المالي وإلغاء الازدواج</span>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                        تطبيق الكود الوظيفي و الرقم والوطني والحساب البنكي  وتجميد الوظائف المزدوجة كشرط مسبق لتمرير المخصصات المرتفعة.
+                    </p>
+                </div>
+
+                <div class="p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5 sm:space-y-2">
+                    <div class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-2">
+                        <span>🛡️</span>
+                        <span>استدامة صندوق الضمان الاجتماعي</span>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                        رفع الحد الأدنى للمعاش التقاعدي إلى 3,000 د.ل (80% من مربوط الدرجة الأولى) مع تخصيص عوائد سيادية للصندوق.
+                    </p>
+                </div>
+
+                <div class="p-4 sm:p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-1.5 sm:space-y-2">
+                    <div class="font-bold text-slate-900 text-xs sm:text-sm flex items-center gap-2">
+                        <span>📊</span>
+                        <span>إلغاء البدلات العشوائية</span>
+                    </div>
+                    <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                        دمج البدلات الاستثنائية القديمة، واقتصار الصرف الإضافي على علاوة التمييز المهني والعمل الميداني والمسؤولية الإشرافية.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Analytics on Compression & Allowances -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+            <div class="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-200 space-y-4 sm:space-y-6">
+                <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">مقارنة نسبة الانضغاط مع النظم السابقة</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">تطور الفجوة بين أعلى وأدنى أجر في الدولة</p>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="compressionChart"></canvas>
+                </div>
+                <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                    نجح السلم المقترح في خفض نسبة الانضغاط من أكثر من 30 ضعفاً في القوانين الجانبية الاستثنائية إلى 8 أضعاف فقط، وهي نسبة تطابق المعايير الدولية للإدارة العامة.
+                </p>
+            </div>
+
+            <div class="lg:col-span-6 bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-6 shadow-xl border border-slate-200 space-y-4 sm:space-y-6">
+                <div>
+                    <h3 class="text-base sm:text-lg font-bold text-slate-900">سقوف العلاوات والبدلات المسموح بها</h3>
+                    <p class="text-[11px] sm:text-xs text-slate-500 mt-0.5">الحد الأقصى للبدلات الوظيفية فوق المرتب الأساسي</p>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="allowancesChart"></canvas>
+                </div>
+                <p class="text-[11px] sm:text-xs text-slate-600 leading-relaxed">
+                    حظر مشروع القانون إقرار أي بدلات عشوائية خارج الحوافز النوعية المحددة (تمييز مهني 20%، عمل ميداني ونائية 25%، ومسؤولية إشرافية 10%).
+                </p>
+            </div>
+        </section>
+
+        <!-- Section 6: Full Draft Law & Governance Roadmap -->
+        <section id="draft-law" class="bg-white rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-xl border border-slate-200 space-y-6 sm:space-y-8">
+            <div class="space-y-2 sm:space-y-3 border-b border-slate-200 pb-4 sm:pb-6">
+                <div class="inline-block px-3 py-1 bg-amber-100 text-amber-800 rounded-full text-[11px] sm:text-xs font-bold">
+                    النص التشريعي المعتمد
+                </div>
+                <h2 class="text-xl sm:text-2xl lg:text-3xl font-extrabold text-slate-900">
+                    مسودة مشروع قانون جدول المرتبات الموحد الشامل (المواد 1 - 15)
+                </h2>
+                <p class="text-slate-600 text-xs sm:text-sm lg:text-base leading-relaxed">
+                    انقر على أي فصل لاستعراض النصوص القانونية الكاملة بنسق تفاعلي سلس على جميع الأجهزة.
+                </p>
+            </div>
+
+            <!-- Accordion Chapters -->
+            <div class="space-y-3 sm:space-y-4">
+                <!-- Chapter 1 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button class="accordion-btn w-full px-4 sm:px-6 py-3.5 sm:py-4 text-right font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition-colors text-xs sm:text-base" onclick="toggleAccordion(this)">
+                        <span>الفصل الأول: أحكام تمهيدية ونطاق السريان والشمولية (المواد 1 - 3)</span>
+                        <span class="text-base sm:text-lg text-emerald-600 shrink-0 mr-2">+</span>
+                    </button>
+                    <div class="accordion-content px-4 sm:px-6 bg-white text-xs sm:text-sm text-slate-700 space-y-2 sm:space-y-3 pt-3 sm:pt-4 pb-4 sm:pb-6 border-t border-slate-200">
+                        <p><strong>المادة (1) التعريفات:</strong> تُحدد المصطلحات المعتمدة: المرتب الأساسي الموحد، الدينار الذهبي الإسلامي الحسابي (4.25g 24k)، الوحدة الإدارية، وإجمالي المرتب الاستحقاقي.</p>
+                        <p><strong>المادة (2) أهداف القانون:</strong> تحقيق العدالة والمساواة وتكافؤ الفرص بين كافة العاملين بالقطاع العام، وإنهاء التفاوت الفئوي وحماية القوة الشرائية للدخول.</p>
+                        <p><strong>المادة (3) الشمولية وإلغاء الاستثناءات:</strong> تسري أحكام هذا القانون والجدول المرفق به إلزامياً على جميع الموظفين وشاغلي الوظائف العامة والنوعية والسيادية في السلطات الثلاث، ويقع باطلاً ومعدوم الأثر كل قرار بمنح معاملات مالية استثنائية.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button class="accordion-btn w-full px-4 sm:px-6 py-3.5 sm:py-4 text-right font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition-colors text-xs sm:text-base" onclick="toggleAccordion(this)">
+                        <span>الفصل الثاني: هيكل المرتبات ومعيار الدينار الذهبي (المواد 4 - 5)</span>
+                        <span class="text-base sm:text-lg text-emerald-600 shrink-0 mr-2">+</span>
+                    </button>
+                    <div class="accordion-content px-4 sm:px-6 bg-white text-xs sm:text-sm text-slate-700 space-y-2 sm:space-y-3 pt-3 sm:pt-4 pb-4 sm:pb-6 border-t border-slate-200">
+                        <p><strong>المادة (4) اعتماد الجدول الموحد:</strong> اعتماد السلم المكون من 20 درجة وظيفية تغطي كافة الفئات بالدولة.</p>
+                        <p><strong>المادة (5) الضوابط النقدية للمعيار الذهبي:</strong> يُتخذ الدينار الذهبي (4.25 غرام عيار 24) معياراً استرشادياً لتقييم القدرة الشرائية. يُحدد بداية مربوط الدرجة الأولى بـ 3,750 د.ل (1.00 دينار ذهبي)، وسقف الدرجة العشرين بـ 30,000 د.ل (8.00 دنانير ذهبية)، بنسبة انضغاط ثابتة (1 : 8). تشكل لجنة فنية دائمة بقرار من مجلس الوزراء للمراجعة السنوية لمؤشرات التضخم.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button class="accordion-btn w-full px-4 sm:px-6 py-3.5 sm:py-4 text-right font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition-colors text-xs sm:text-base" onclick="toggleAccordion(this)">
+                        <span>الفصل الثالث: قواعد التسكين والاستحقاق والترقية (المواد 6 - 7)</span>
+                        <span class="text-base sm:text-lg text-emerald-600 shrink-0 mr-2">+</span>
+                    </button>
+                    <div class="accordion-content px-4 sm:px-6 bg-white text-xs sm:text-sm text-slate-700 space-y-2 sm:space-y-3 pt-3 sm:pt-4 pb-4 sm:pb-6 border-t border-slate-200">
+                        <p><strong>المادة (6) التسكين بحسب المؤهلات:</strong> تقسيم الوظائف إلى 4 كتلات تنظيمية (الخدمات المعاونة 1-6، التخصصية التنفيذية 7-11، الإدارة العليا 12-16، الوظائف السيادية 17-20).</p>
+                        <p><strong>المادة (7) ضوابط الاستحقاق والترقية:</strong> استحقاق المرتب اعتباراً من تاريخ المباشرة الفعلية، واستحقاق العلاوة السنوية كل 12 شهراً بشرط ألا يقل تقرير الكفاءة عن "جيد جداً"، مع إخضاع الترقيات لأحكام قانون علاقات العمل رقم (12) لسنة 2010.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button class="accordion-btn w-full px-4 sm:px-6 py-3.5 sm:py-4 text-right font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition-colors text-xs sm:text-base" onclick="toggleAccordion(this)">
+                        <span>الفصل الرابع: تنظيم البدلات والعلاوات وحظر الازدواج (المواد 8 - 10)</span>
+                        <span class="text-base sm:text-lg text-emerald-600 shrink-0 mr-2">+</span>
+                    </button>
+                    <div class="accordion-content px-4 sm:px-6 bg-white text-xs sm:text-sm text-slate-700 space-y-2 sm:space-y-3 pt-3 sm:pt-4 pb-4 sm:pb-6 border-t border-slate-200">
+                        <p><strong>المادة (8) توحيد العلاوات:</strong> إلغاء البدلات العشوائية واقتصار الصرف على: التمييز المهني (بحد أقصى 20%)، المسؤولية القيادية (10%)، والعمل الميداني والنائية (25%).</p>
+                        <p><strong>المادة (9) استقلالية المنحة العائلية:</strong> استمرار صرف منحة الزوجة والأبناء وفق القانون (27) لسنة 2013 كاستحقاق رعاية اجتماعية مستقل غير خاضع للضرائب.</p>
+                        <p><strong>المادة (10) حظر الازدواج الوظيفي:</strong> حظر تقاضي أكثر من مرتب واحد من الخزانة العامة، وربط الصرف بالرقم الوطني والرقم المالي والرقم الوظيفي والحساب المصرفي .</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 5 & 6 -->
+                <div class="border border-slate-200 rounded-2xl overflow-hidden bg-slate-50">
+                    <button class="accordion-btn w-full px-4 sm:px-6 py-3.5 sm:py-4 text-right font-bold text-slate-900 flex justify-between items-center hover:bg-slate-100 transition-colors text-xs sm:text-base" onclick="toggleAccordion(this)">
+                        <span>الفصل الخامس والسادس: التقاعد والانضباط المالي والأحكام الانتقالية (المواد 11 - 15)</span>
+                        <span class="text-base sm:text-lg text-emerald-600 shrink-0 mr-2">+</span>
+                    </button>
+                    <div class="accordion-content px-4 sm:px-6 bg-white text-xs sm:text-sm text-slate-700 space-y-2 sm:space-y-3 pt-3 sm:pt-4 pb-4 sm:pb-6 border-t border-slate-200">
+                        <p><strong>المادة (11) تسوية المعاشات التقاعدية:</strong> رفع الحد الأدنى للمعاش التقاعدي إلى 3,000 د.ل (80% من الدرجة الأولى) وتسوية المعاشات وفق آخر 36 شهراً.</p>
+                        <p><strong>المادة (12) الانضباط المالي:</strong> حظر إجازة أية تفويضات مالية غير مطابقة للملاكات المعتمدة أو تتجاوز اعتمادات الباب الأول.</p>
+                        <p><strong>المادة (13) التسكين المرحلي:</strong> تشكيل لجنة عليا للتسكين خلال 6 أشهر، وجواز التنفيذ المرحلي للآثار المالية مراعاة للسيولة.</p>
+                        <p><strong>المادة (14 - 15) الإلغاء والنفاذ:</strong> إلغاء القانون رقم (15) لسنة 1981 والقانون (18) لسنة 2023 والقرار (540) لسنة 2022، وسريان القانون من الشهر التالي لنشره بالجريدة الرسمية.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Implementation Roadmap (1 col mobile, 2 col tablet, 4 col desktop) -->
+            <div class="space-y-3 sm:space-y-4 pt-4 sm:pt-6 border-t border-slate-200">
+                <h3 class="text-base sm:text-lg font-bold text-slate-900">خارطة التنفيذ الإجرائية ذات الأركان الأربعة</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5 sm:gap-4">
+                    <div class="p-4 sm:p-5 rounded-2xl dark-card text-white space-y-1.5 sm:space-y-2 border border-slate-800">
+                        <div class="text-xl sm:text-2xl font-black text-amber-400">01</div>
+                        <h4 class="font-bold text-xs sm:text-sm">التدقيق الحيوي والربط</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                            ربط المرتبات بالرقم الوطني والرقم المالي والرقم الوظيفي والحساب المصرفي لتجميد الوظائف المزدوجة فوراً.
+                        </p>
+                    </div>
+
+                    <div class="p-4 sm:p-5 rounded-2xl dark-card text-white space-y-1.5 sm:space-y-2 border border-slate-800">
+                        <div class="text-xl sm:text-2xl font-black text-emerald-400">02</div>
+                        <h4 class="font-bold text-xs sm:text-sm">التطبيق المرحلي</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                            منح مجلس الوزراء صلاحية تنفيذ الآثار المالية على مراحل زمنية وقطاعية وفق التدفقات النفطية.
+                        </p>
+                    </div>
+
+                    <div class="p-4 sm:p-5 rounded-2xl dark-card text-white space-y-1.5 sm:space-y-2 border border-slate-800">
+                        <div class="text-xl sm:text-2xl font-black text-blue-400">03</div>
+                        <h4 class="font-bold text-xs sm:text-sm">مراجعة المعادل النقدي</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                            مراجعة دورية عبر لجنة فنية مشتركة لمراقبة التضخم وتعديل قيمة المعادل عند الضرورة.
+                        </p>
+                    </div>
+
+                    <div class="p-4 sm:p-5 rounded-2xl dark-card text-white space-y-1.5 sm:space-y-2 border border-slate-800">
+                        <div class="text-xl sm:text-2xl font-black text-purple-400">04</div>
+                        <h4 class="font-bold text-xs sm:text-sm">توحيد الرقابة</h4>
+                        <p class="text-[11px] sm:text-xs text-slate-300 leading-relaxed">
+                            إخضاع جميع القطاعات والجهات السيادية لجدول واحد وحظر الجداول الموازية.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Sovereign Responsive Footer -->
+    <footer class="dark-card text-white py-8 sm:py-10 border-t border-slate-800 text-center text-xs space-y-3 mt-12 sm:mt-16">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-slate-400 text-[11px] sm:text-xs">
+            <div>
+                    مشروع قانون جدول المرتبات الموحد الشامل - الدولة الليبية ©2026
+            </div>
+            <div class="flex items-center gap-2 sm:gap-4">
+                <span></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Salary Scale Complete Data Array
+        const salaryData = [
+            { grade: "1", title: "خدمات عامة ومعاونة / دون الابتدائية", base: 3750, allowance: 50, gold: 1.00, cluster: "الكتلة 1", desc: "أعمال المساعدة والخدمات الأولية" },
+            { grade: "2", title: "الشهادة الابتدائية وما يعادلها من خبرة تشغيلية", base: 4100, allowance: 60, gold: 1.09, cluster: "الكتلة 1", desc: "مهن تشغيلية ومكتبية مساعدة" },
+            { grade: "3", title: "شهادة إتمام مرحلة التعليم الأساسي (الإعدادية)", base: 4500, allowance: 70, gold: 1.20, cluster: "الكتلة 1", desc: "وظائف كتابية وحرفية مساعدة" },
+            { grade: "4", title: "تدريب مهني معتمد بعد الإعدادية / أعمال حرفية", base: 4950, allowance: 80, gold: 1.32, cluster: "الكتلة 1", desc: "فنيون مهنيون وحرفيون متخصصون" },
+            { grade: "5", title: "الشهادة الثانوية العامة أو ما يعادلها في التخصص", base: 5450, allowance: 90, gold: 1.45, cluster: "الكتلة 1", desc: "وظائف تنفيذية ومكتبية متوسطة" },
+            { grade: "6", title: "دبلوم المعاهد الفنية المتوسطة", base: 6000, allowance: 100, gold: 1.60, cluster: "الكتلة 1", desc: "كوادر تقنية وفنية مساعدة" },
+            { grade: "7", title: "دبلوم المعاهد العليا علوم إنسانية واجتماعية", base: 6650, allowance: 115, gold: 1.77, cluster: "الكتلة 2", desc: "وظائف تخصصية وإدارية معاونة" },
+            { grade: "8", title: "الدرجة الجامعية الأولى (بكالوريوس/ليسانس/دبلوم عالي)", base: 7400, allowance: 130, gold: 1.97, cluster: "الكتلة 2", desc: "عصب الجهاز الإداري والتعليمي" },
+            { grade: "9", title: "شهادة الماجستير / بكالوريوس الطب البشري وجراحة الفم", base: 8250, allowance: 150, gold: 2.20, cluster: "الكتلة 2", desc: "أطباء ممارسون وحملة الماجستير" },
+            { grade: "10", title: "شهادة الدكتوراه / شغل وظيفة رئيس قسم بملاك معتمد", base: 9200, allowance: 175, gold: 2.45, cluster: "الكتلة 2", desc: "حملة الدكتوراه والقيادات الإدارية الوسطى" },
+            { grade: "11", title: "دكتوراه مع 4 سنوات أقدمية بحثية / أستاذ مساعد", base: 10300, allowance: 200, gold: 2.75, cluster: "الكتلة 2", desc: "خبرات استشارية وأعضاء هيئة التدريس" },
+            { grade: "12", title: "وظائف تخصصية متقدمة / مدير مكتب / أستاذ مساعد", base: 11550, allowance: 230, gold: 3.08, cluster: "الكتلة 3", desc: "إشراف تخصصي ومستشارون فنيون" },
+            { grade: "13", title: "وظائف إشرافية عليا (مدير إدارة) / أستاذ مشارك", base: 13000, allowance: 260, gold: 3.47, cluster: "الكتلة 3", desc: "قيادة الإدارات الرئيسية" },
+            { grade: "14", title: "مدير إدارة عامة / خبير مستشار / درجة الأستاذية", base: 14650, allowance: 300, gold: 3.91, cluster: "الكتلة 3", desc: "كبار الخبراء وأساتذة الجامعات" },
+            { grade: "15", title: "وكيل وزارة مساعد / رئيس هيئة أو مصلحة عامة", base: 16500, allowance: 350, gold: 4.40, cluster: "الكتلة 3", desc: "رؤساء المصالح والأجهزة التنفيذية" },
+            { grade: "16", title: "وكيل وزارة فني (قمة الخدمة المدنية)", base: 18600, allowance: 400, gold: 4.96, cluster: "الكتلة 3", desc: "أعلى درجة في الخدمة المدنية العامة" },
+            { grade: "17", title: "رؤساء المؤسسات والهيئات العامة المستقلة (سيادية)", base: 21000, allowance: 450, gold: 5.60, cluster: "الكتلة 4", desc: "قيادات الهيئات الرقابية والسيادية (سيادية) " },
+            { grade: "18", title: "الوزراء / أعضاء مجلس النواب / المحافظ (سيادية)", base: 23800, allowance: 500, gold: 6.35, cluster: "الكتلة 4", desc: "السلطة التنفيذية والتشريعية   والنقدية (سيادية)" },
+            { grade: "19", title: "رؤساء المجالس الرئاسية والتشريعية والقضائية (سيادية)", base: 25500, allowance: 550, gold: 6.80, cluster: "الكتلة 4", desc: "رؤساء السلطات العليا (سيادية)" },
+            { grade: "20", title: "رئيس الدولة الليبية (سيادية)", base: 30000, allowance: 600, gold: 8.00, cluster: "الكتلة 4", desc: "رأس الدولة وسقف الأجر السيادي الأعلى" }
+        ];
+
+        // Mobile Nav Drawer Toggle
+        function toggleMobileNav() {
+            const menu = document.getElementById('mobileMenuDropdown');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        }
+        document.getElementById('mobileMenuBtn').addEventListener('click', toggleMobileNav);
+
+        // Label Wrapping Logic for Chart.js
+        function wrapLabel(str, maxChars = 14) {
+            if (!str) return '';
+            if (typeof str !== 'string') return str;
+            if (str.length <= maxChars) return str;
+            const words = str.split(' ');
+            const lines = [];
+            let currentLine = words[0];
+            for (let i = 1; i < words.length; i++) {
+                if ((currentLine + ' ' + words[i]).length <= maxChars) {
+                    currentLine += ' ' + words[i];
+                } else {
+                    lines.push(currentLine);
+                    currentLine = words[i];
+                }
+            }
+            lines.push(currentLine);
+            return lines;
+        }
+
+        const tooltipConfig = {
+            callbacks: {
+                title: function(tooltipItems) {
+                    const item = tooltipItems[0];
+                    let label = item.chart.data.labels[item.dataIndex];
+                    return Array.isArray(label) ? label.join(' ') : label;
+                }
+            }
+        };
+
+        // Render Table Rows
+        function populateTable(data) {
+            const tbody = document.getElementById('salaryTableBody');
+            tbody.innerHTML = '';
+            data.forEach((item) => {
+                const tr = document.createElement('tr');
+                tr.className = "hover:bg-slate-50 transition-colors border-b border-slate-100";
+                tr.innerHTML = `
+                    <td class="p-3 sm:p-3.5 font-bold text-emerald-800 whitespace-nowrap">الدرجة ${item.grade}</td>
+                    <td class="p-3 sm:p-3.5 font-medium text-slate-900 leading-snug">${item.title}</td>
+                    <td class="p-3 sm:p-3.5 font-extrabold text-slate-900 whitespace-nowrap">${item.base.toLocaleString()} د.ل</td>
+                    <td class="p-3 sm:p-3.5 text-slate-600 whitespace-nowrap">${item.allowance} د.ل</td>
+                    <td class="p-3 sm:p-3.5 font-bold text-amber-600 whitespace-nowrap">${item.gold.toFixed(2)} دينار ذهبي</td>
+                `;
+                tbody.appendChild(tr);
+            });
+        }
+
+        // Render Mobile Cards View
+        function populateCards(data) {
+            const cardsContainer = document.getElementById('cardsViewWrapper');
+            cardsContainer.innerHTML = '';
+            data.forEach((item) => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-4 rounded-2xl border border-slate-200 shadow-sm hover:border-emerald-500 transition-all space-y-2";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between border-b border-slate-100 pb-2">
+                        <span class="px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-extrabold text-xs">الدرجة ${item.grade}</span>
+                        <span class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">${item.gold.toFixed(2)} دينار ذهبي</span>
+                    </div>
+                    <div class="text-xs font-bold text-slate-900 leading-snug">${item.title}</div>
+                    <div class="grid grid-cols-2 gap-2 pt-1 text-[11px]">
+                        <div class="bg-slate-50 p-2 rounded-xl">
+                            <span class="text-slate-500 block text-[10px]">المربوط الأساسي:</span>
+                            <span class="font-extrabold text-slate-900 text-sm">${item.base.toLocaleString()} د.ل</span>
+                        </div>
+                        <div class="bg-slate-50 p-2 rounded-xl">
+                            <span class="text-slate-500 block text-[10px]">العلاوة السنوية:</span>
+                            <span class="font-bold text-slate-700 text-sm">${item.allowance} د.ل</span>
+                        </div>
+                    </div>
+                    <div class="text-[10px] text-slate-400 flex justify-between items-center pt-1 border-t border-slate-100">
+                        <span>التصنيف: ${item.cluster}</span>
+                        <span>معيار 4.25g عيار 24</span>
+                    </div>
+                `;
+                cardsContainer.appendChild(card);
+            });
+        }
+
+        // Switch between Table and Cards View
+        function switchScaleView(mode) {
+            const tableWrapper = document.getElementById('tableViewWrapper');
+            const cardsWrapper = document.getElementById('cardsViewWrapper');
+            const tableBtn = document.getElementById('viewTableBtn');
+            const cardsBtn = document.getElementById('viewCardsBtn');
+
+            if (mode === 'cards') {
+                tableWrapper.classList.add('hidden');
+                cardsWrapper.classList.remove('hidden');
+                cardsBtn.className = "px-3 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all flex items-center gap-1";
+                tableBtn.className = "px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1";
+            } else {
+                cardsWrapper.classList.add('hidden');
+                tableWrapper.classList.remove('hidden');
+                tableBtn.className = "px-3 py-1.5 rounded-lg bg-emerald-600 text-white shadow-sm transition-all flex items-center gap-1";
+                cardsBtn.className = "px-3 py-1.5 rounded-lg text-slate-600 hover:text-slate-900 transition-all flex items-center gap-1";
+            }
+        }
+
+        // Live Search Filter for both views
+        document.getElementById('tableSearch').addEventListener('input', function(e) {
+            const query = e.target.value.toLowerCase();
+            const filtered = salaryData.filter(d => 
+                d.grade.includes(query) || d.title.toLowerCase().includes(query) || d.base.toString().includes(query)
+            );
+            populateTable(filtered);
+            populateCards(filtered);
+        });
+
+        // Dynamic Gold Calculation Logic
+        function initGoldCalc() {
+            const select = document.getElementById('gradeSelectCalc');
+            salaryData.forEach((d) => {
+                const opt = document.createElement('option');
+                opt.value = d.grade;
+                opt.textContent = `الدرجة ${d.grade}: ${d.title.substring(0, 30)}...`;
+                select.appendChild(opt);
+            });
+
+            function updateCalc() {
+                const rate = parseFloat(document.getElementById('goldRateInput').value) || 882.35;
+                const singleGoldVal = 4.25 * rate;
+                const selectedGradeNum = select.value || "1";
+                const gradeObj = salaryData.find(d => d.grade === selectedGradeNum);
+
+                const currentGradeSalary = gradeObj.gold * singleGoldVal;
+
+                document.getElementById('headerGoldLyd').innerHTML = `${Math.round(singleGoldVal).toLocaleString()} <span class="text-xs sm:text-base text-slate-300">د.ل</span>`;
+                document.getElementById('dynamicGoldVal').textContent = `${Math.round(singleGoldVal).toLocaleString()} د.ل`;
+                document.getElementById('dynamicGradeGold').textContent = `${gradeObj.gold.toFixed(2)} دينار ذهبي`;
+                document.getElementById('dynamicGradeSalary').textContent = `${Math.round(currentGradeSalary).toLocaleString()} د.ل`;
+            }
+
+            document.getElementById('goldRateInput').addEventListener('input', updateCalc);
+            select.addEventListener('change', updateCalc);
+            updateCalc();
+        }
+
+        // Accordion Toggle
+        function toggleAccordion(btn) {
+            const content = btn.nextElementSibling;
+            const icon = btn.querySelector('span:last-child');
+            if (content.classList.contains('open')) {
+                content.classList.remove('open');
+                icon.textContent = '+';
+            } else {
+                document.querySelectorAll('.accordion-content').forEach(el => el.classList.remove('open'));
+                document.querySelectorAll('.accordion-btn span:last-child').forEach(el => el.textContent = '+');
+                content.classList.add('open');
+                icon.textContent = '−';
+            }
+        }
+
+        // DOM Initialization
+        window.addEventListener('DOMContentLoaded', () => {
+            populateTable(salaryData);
+            populateCards(salaryData);
+            initGoldCalc();
+
+            // Auto-detect mobile to set default smart view
+            if (window.innerWidth < 640) {
+                switchScaleView('cards');
+            }
+
+            const isMobile = window.innerWidth < 640;
+            const fontScale = isMobile ? 9 : 11;
+
+            // Chart 1: Salary Scale Dynamic Combo
+            const ctxSalary = document.getElementById('salaryChart').getContext('2d');
+            const salaryLabels = salaryData.map(d => isMobile ? `د.${d.grade}` : `درجة ${d.grade}`);
+
+            new Chart(ctxSalary, {
+                type: 'bar',
+                data: {
+                    labels: salaryLabels,
+                    datasets: [
+                        {
+                            label: 'المربوط الأساسي (د.ل)',
+                            data: salaryData.map(d => d.base),
+                            backgroundColor: '#059669',
+                            borderRadius: isMobile ? 3 : 6,
+                            yAxisID: 'y'
+                        },
+                        {
+                            label: 'بالدينار الذهبي',
+                            data: salaryData.map(d => d.gold),
+                            type: 'line',
+                            borderColor: '#D97706',
+                            backgroundColor: '#D97706',
+                            borderWidth: isMobile ? 2 : 3,
+                            pointRadius: isMobile ? 2 : 4,
+                            yAxisID: 'y1'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: tooltipConfig,
+                        legend: { position: 'top', labels: { font: { family: 'Tajawal', size: fontScale } } }
+                    },
+                    scales: {
+                        x: { 
+                            ticks: { 
+                                font: { family: 'Tajawal', size: isMobile ? 8 : 10 },
+                                maxRotation: isMobile ? 45 : 0
+                            } 
+                        },
+                        y: {
+                            type: 'linear',
+                            position: 'right',
+                            title: { display: !isMobile, text: 'الدينار الليبي (د.ل)', font: { family: 'Tajawal', size: 10 } },
+                            ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'left',
+                            grid: { drawOnChartArea: false },
+                            title: { display: !isMobile, text: 'الدينار الذهبي', font: { family: 'Tajawal', size: 10 } },
+                            ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } }
+                        }
+                    }
+                }
+            });
+
+            // Chart 2: Functional Clusters Donut
+            const ctxClusters = document.getElementById('clustersChart').getContext('2d');
+            const clusterLabels = ['الكتلة 1: المعاونة والمهنية', 'الكتلة 2: التخصصية والتنفيذية', 'الكتلة 3: الإدارة العليا', 'الكتلة 4: الوظائف السيادية'].map(l => wrapLabel(l, 14));
+
+            new Chart(ctxClusters, {
+                type: 'doughnut',
+                data: {
+                    labels: clusterLabels,
+                    datasets: [{
+                        data: [6, 5, 5, 4],
+                        backgroundColor: ['#059669', '#2563EB', '#9333EA', '#D97706']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: tooltipConfig,
+                        legend: { 
+                            position: 'bottom', 
+                            labels: { 
+                                boxWidth: 12,
+                                font: { family: 'Tajawal', size: isMobile ? 9 : 11 } 
+                            } 
+                        }
+                    }
+                }
+            });
+
+            // Chart 3: Fiscal Trajectory Multi-Line
+            const ctxFiscal = document.getElementById('fiscalChart').getContext('2d');
+            const fiscalYears = ['2020', '2021', '2022', '2023', '2024', '2025', '2026 الحالي', '2026 المستهدف', '2026 دون إصلاح'].map(l => wrapLabel(l, 12));
+
+            new Chart(ctxFiscal, {
+                type: 'line',
+                data: {
+                    labels: fiscalYears,
+                    datasets: [{
+                        label: 'فاتورة المرتبات (مليار د.ل)',
+                        data: [21.8, 33.2, 42.5, 52.1, 60.0, 68.5, 73.3, 88.0, 140.0],
+                        borderColor: '#E11D48',
+                        backgroundColor: 'rgba(225, 29, 72, 0.1)',
+                        fill: true,
+                        tension: 0.3,
+                        pointBackgroundColor: ['#E11D48','#E11D48','#E11D48','#E11D48','#E11D48','#E11D48','#E11D48','#059669','#DC2626'],
+                        pointRadius: isMobile ? 3 : 5
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: tooltipConfig,
+                        legend: { position: 'top', labels: { font: { family: 'Tajawal', size: fontScale } } }
+                    },
+                    scales: {
+                        y: {
+                            title: { display: !isMobile, text: 'المليار دينار', font: { family: 'Tajawal', size: 10 } },
+                            ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } }
+                        },
+                        x: { 
+                            ticks: { 
+                                font: { family: 'Tajawal', size: isMobile ? 8 : 10 },
+                                maxRotation: isMobile ? 45 : 0
+                            } 
+                        }
+                    }
+                }
+            });
+
+            // Chart 4: Compression Ratio Bar Chart
+            const ctxCompression = document.getElementById('compressionChart').getContext('2d');
+            const compLabels = ['النظام الجانبي السابق', 'المعيار الموحد المقترح', 'المعيار الدولي الموصى به'].map(l => wrapLabel(l, 14));
+
+            new Chart(ctxCompression, {
+                type: 'bar',
+                data: {
+                    labels: compLabels,
+                    datasets: [{
+                        label: 'نسبة الفجوة بين أعلى وأدنى أجر (ضعف)',
+                        data: [30, 8, 7],
+                        backgroundColor: ['#DC2626', '#059669', '#2563EB'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    indexAxis: 'y',
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: tooltipConfig,
+                        legend: { display: false }
+                    },
+                    scales: {
+                        x: { ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } } },
+                        y: { ticks: { font: { family: 'Tajawal', size: isMobile ? 9 : 11 } } }
+                    }
+                }
+            });
+
+            // Chart 5: Allowances Ceiling Bar Chart
+            const ctxAllowances = document.getElementById('allowancesChart').getContext('2d');
+            const allowLabels = ['المرتب الأساسي', 'علاوة التمييز', 'العمل الميداني', 'المسؤولية'].map(l => wrapLabel(l, 12));
+
+            new Chart(ctxAllowances, {
+                type: 'bar',
+                data: {
+                    labels: allowLabels,
+                    datasets: [{
+                        label: 'النسبة المئوية القصوى (%)',
+                        data: [100, 20, 25, 10],
+                        backgroundColor: ['#0F172A', '#D97706', '#059669', '#2563EB'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        tooltip: tooltipConfig,
+                        legend: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            max: 120,
+                            ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } },
+                            title: { display: !isMobile, text: 'النسبة المئوية (%)', font: { family: 'Tajawal', size: 10 } }
+                        },
+                        x: { ticks: { font: { family: 'Tajawal', size: isMobile ? 8 : 10 } } }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
